@@ -1,25 +1,25 @@
 *{
     padding: 0;
     margin: 0;
-    color: #1d69c0;
+    color: #ffffff;
     text-align: center;
 }
 
 html, body{
-    background-color: #997766;
+    background-color: #756699;
 
 }
 
 .main-container{
-    border: 4px solid rgb(255, 0, 84);
+    border: 4px solid rgb(255, 238, 0);
     border-radius: 50px;
     margin: 2rem;
-    background-color: #08d44c;
+    background-color: #00d9ff;
 }
 
 
 nav, section, footer, aside, article{
-    border: 2px solid #a80abd;
+    border: 2px solid #ff00bf;
     margin: 1rem;
     border-radius: 10px;
     padding: 1rem;
@@ -28,10 +28,10 @@ nav, section, footer, aside, article{
 article, aside{
     width: 40%;
     display: inline-block;
-    height: 300px;
-    background-color: #e98512;
+    height: 600px;
+    background-color: #530053;
 }
 
 nav, footer, section {
-    background-color: darkgrey;
+    background-color: rgb(24, 122, 29);
 }
