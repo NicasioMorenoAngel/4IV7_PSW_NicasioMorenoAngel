@@ -1,0 +1,25 @@
+* {
+    padding: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: url(../img/zzz2.png);
+    background-size: 100%;
+}
+.nombre {
+    font-size: 24px; 
+    font-weight: bold;
+}
+
+#foto {
+    margin: 30px 30px 30px 70px;
+    float: right;
+    width: 300px;
+    height: 370px;
+}
+
+fieldset {
+    color: rgb(76, 88, 94);
+    font-family: Arial, Helvetica, sans-serif;
+}
