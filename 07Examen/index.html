@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabla dinámica</title>
+    <style>
+        div{
+            text-align: center;
+            margin: 100px;
+        }
+        input{
+            border: 1px solid blue;
+            margin-right: 50px;
+            height: 30px;
+        }
+        table{
+            border: 1px solid black;
+            width: 500px;
+            margin: auto;
+        }
+        th,td{
+            border: 1px solid black;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div>
+        <input type="text" id="valor" placeholder="Valor del automóvil">
+        <input type="text" id="cuota" placeholder="Cuota Inicial">
+        <input type="text" id="plazo" placeholder="Periodo">
+        <input type="button" id="Calcular" value="Calcular">
+    </div>
+
+    <table>
+        <caption>Cálculo de interés compuesto</caption>
+        <tr>
+			<th>Mes</th>
+            <th>Valor</th>
+            <th>Cuota</th>
+            <th>Periodo</th>
+            <th>Cálculo</th>
+        </tr>
+
+    </table>
+    <script>
+        document.getElementById("Calcular").onclick = function () {
+            var valor = Number(document.getElementById("valor").value);
+            var cuota = Number(document.getElementById("cuota").value);
+            var plazo = Number(document.getElementById("plazo").value);
+			var calculo=0;
+			var cuota_10=0;
+			var interes=3.94;
+			var interesacumulado=0;
+			var table_node = document.getElementsByTagName("table")[0];
+			
+			if(valor<100000 || valor >1000000)
+				{
+				alert("El valor debe estar entre 100,000 y 1'000,000");
+				valor=0;
+				}
+			else{
+				cuota_10=valor*0.10;
+				}
+			if(cuota<cuota_10)
+				{
+				alert("La cuota debe ser de al menos el 10% del valor del automóvil");
+				cuota=0;
+				}
+			if(plazo!=3 || plazo!=6 || plazo!=9 || plazo!=12 || plazo!=18)
+				{
+				alert("El plazo debe ser 3,6,9,12 o 18 ");
+				plazo=0;
+				}	
+			if(valor!=0 && cuota!=0 && plazo!=0)
+				{
+				calculo=valor*interes;
+					
+				for (int i=1;i<plazo;i++)
+					{
+					table_node.innerHTML += "       <tr>\n" +
+						"            <td>"+i+"</td>\n" +
+						"            <td>"+valor+"</td>\n" +
+						"            <td>"+cuota+"</td>\n" +
+						"            <td>"+plazo+"</td>\n" +
+						"            <td>"+calculo+"</td>\n" +
+						"        </tr>";
+					i+=plazo;
+					}
+				}
+        }
+
+    </script>
+</body>
+</html>
